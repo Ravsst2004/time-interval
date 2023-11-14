@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Interval</title>
+
+    <style>
+        .time-interval {
+            display: flex;
+            flex-direction: row;
+        }
+        .time-interval button {
+            background-color: aqua;
+        }
+        .time-interval p {
+            text-align: center;
+            font-weight: bold;
+        }
+        .time-interval .time-interval-con button {
+            width: 30px;
+        }
+        .time-interval #reset {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="time-interval">
+        <div class="time-interval-con">
+            <button id="plus">+</button>
+            <p id="result">0</p>
+            <button id="min">-</button>
+        </div>
+            <button id="reset">Reset</button>
+    </div>
+
+    <script>
+        const plus = document.querySelector("#plus");
+        const min = document.querySelector("#min");
+        const resultNumber = document.querySelector("#result");
+        const reset = document.querySelector("#reset");
+
+        let result = 0;
+        plus.addEventListener("click", () => {
+            result++;
+            updateNumber();
+        });
+        min.addEventListener("click", () => {
+            result--;
+            updateNumber();
+        });
+        reset.addEventListener("click", () => {
+            result = 0;
+            updateNumber();
+        });
+
+        function updateNumber() {
+            resultNumber.textContent = result;
+        }
+    </script>
+
+</body>
+</html>
