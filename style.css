@@ -1,0 +1,17 @@
+.time-interval {
+    display: flex;
+    flex-direction: row;
+}
+.time-interval button {
+    background-color: aqua;
+}
+.time-interval p {
+    text-align: center;
+    font-weight: bold;
+}
+.time-interval .time-interval-con button {
+    width: 30px;
+}
+.time-interval #reset {
+    margin-left: 5px;
+}
